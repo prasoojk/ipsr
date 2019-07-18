@@ -1,0 +1,25 @@
+onfigure with Github-------------
+1.Set your email id globally fit
+   #git config --global user.email "GIT SERVICE EMAIL" - 
+      Here give your github registered email id
+2.Set your name globally fit
+  #git config --global user.name "GIT SERVICE NAME (NOT USERNAME)" 
+     Here give your github user name
+3.Generating ssh key
+   #ssh-keygen -t rsa -b 4096 -C "GITHUB EMAIL" - This creates a new ssh key, using the provided email as a label
+   here give your github  email id
+   When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+4.ssh-add -K ~/.ssh/id_rsa - Add your SSH private key to the ssh-agent.
+5.While logged into Github, go to the top right, click your profile picture, and click Settings in the dropdown. Then click SSH and GPG Keys, or click this link to bring you there: SSH and GPG Keys
+6.Click New SSH Key, give your key a title My Computer, and paste the key in the large box.
+7.Done. Now anytime you clone a repository, Github will automatically give you the SSH URL and you will have to provide your SSH Key paraphrase anytime you push and pull changes and you will not need to type in your username or your password anymore!
+8.show the key
+   #cat /root/.ssh/id_rsa.pub
+9.Paste the key content in github website accont
+   Personal settings -> ssh and gpg keys -> new ssh keys
+  then
+    give title
+    copy the below there then add ssh key
+10.clone with github and local machine
+     #git clone git@github.com:prasoojk/ipsr.git
+11.
